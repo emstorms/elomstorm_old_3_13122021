@@ -1,0 +1,172 @@
+
+*{
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:0;
+}
+:root{
+    // Will be put in variable file then imported
+    
+--grad-clr1:#9356DC;
+--grad-clr2: #FF79DA;
+--grad-clr3: #99E2D0;
+}
+
+@media screen and (max-width :900px){
+  
+body{
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:0;
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    counter-reset: func_num;
+}
+
+header{
+
+}
+
+.discovering{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+
+    &__exploration{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+        padding:15px;
+    h2,
+    a{
+        border:1px solid purple;
+        padding:15px;
+        text-align:center;
+        text-decoration:none;
+            
+    }
+    a{
+        // setting first link to gray color
+        &:first-of-type{
+            color:gray;
+        }   
+    }
+    .bttn_exploration{
+        border-radius:36px;
+        background-image:linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
+        color: white;
+        padding:15px 25px;
+    }
+    }
+
+}
+
+.functionning{
+    width:100%;
+    margin-top:20px;
+    border:1px solid blue;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    &_h2{
+        // align-self:flex-start;
+        margin-left:15px;
+    }
+
+    &_list{
+        // 15px to align title with funclist
+        // padding:0 15px;
+        width:100%;
+        margin-top:15px;
+        padding: 0 5px;
+
+        .func_design{
+            width: 100%;
+            border:1px solid orange;
+            border-radius:15px;
+            padding:15px;
+            margin-bottom:15px;
+            display:flex;
+            justify-content:space-around;
+
+
+            > *{
+                background-color: #9356DC;
+            }
+        }
+    }
+    .func_count{
+        // counter-reset: func_num;
+        // position:relative;
+        background-color:red;
+        position:absolute;
+        left:0;
+        width:15px;
+        // height:15px;
+        border-radius:50%;
+        padding: 3px;
+        font-size: 14px;
+
+        &:before{
+            counter-increment:func_num;
+            content:counter(func_num);
+            
+            
+            
+        }
+
+    }
+}
+
+// RESTAURANTS LIST
+.restaurant{
+    border:1px solid black;
+    padding:5px;
+    &__list{
+        border:1px solid blue;
+        padding:5px;
+    }
+    &__type{
+        border:1px solid green;
+        padding:5px;
+
+        &__img{
+            border:1px solid yellow;
+            width:99%;
+            height:180px;
+            position:relative;
+
+            img{
+                width:100%;
+                height:100%;
+            }
+            .new_item{
+                position:absolute;
+                right:10px;
+                top:20px;
+                background-color:var(--grad-clr3);
+                padding:5px;
+                color:#17B78F; //NEXT use Darker sass function
+            }
+        }
+
+        &__legend{
+            // Restaurant Name  and Heart icon
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            border:1px solid blue;
+            padding:5px;
+
+            .like_icon{
+                border:1px solid brown;
+                padding:15px;
+            }
+        }
+    }
+}
+
+}
