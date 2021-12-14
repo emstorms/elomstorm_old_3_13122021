@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
     <head>
         <meta charset ="UTF-8">
         <link rel="stylesheet" href="css/accueil.css">
         <!-- <meta viewport="width-device" > -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Accueil</title>
     </head>
     <body>
         <header>ohmyfood</header>
         <section class="discovering">
             <div class="discovering__location">
                 <!-- location-searching zone -->
-                <form action="" method="POST">
+                <form action="loca.php" method="POST">
                     <span class="loc_icon"><i class="fa-solid fa-location-dot"></i></span>
                     <input type="search" value="" placeholder="Paris, Belleville">
                 </form>
@@ -60,6 +61,7 @@
         <!-- Restaurant -->
 
         <section class="restaurant">
+            <h3>Restaurants</h3>
             <div class="restaurant__list">
                 <article class="restaurant__type">
                     <div class="restaurant__type__img">
@@ -67,57 +69,75 @@
                         <span class="new_item">Nouveau</span>
                     </div>
                     <div class="restaurant__type__legend">
-                        <div>
-                             <h5 class="restaurant_name"> La palette du goût</h5>
+                        <div class="hold_name">
+                             <h3 class="restaurant_name"> La palette du goût</h3>
                             <span>Mélilmontant</span>
                         </div>
                        
                     <div class="like_icon">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     </div>
 
                 </article>
-            </div>
-
-            <div class="restaurant__list">
+           
                 <article class="restaurant__type">
                     <div class="restaurant__type__img">
-                        <img src="images/restaurants/enchante.jpg" alt="palette du goût">
+                        <img src="images/restaurants/enchante.jpg" alt="La note enchantée">
                         <span class="new_item">Nouveau</span>
                     </div>
                     <div class="restaurant__type__legend">
-                        <div>
-                             <h5 class="restaurant_name"> La note enchantée</h5>
+                        <div class="hold_name">
+                             <h3 class="restaurant_name"> La note enchantée</h3>
                             <span>Charonne</span>
                         </div>
                        
                     <div class="like_icon">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     </div>
 
                 </article>
-            </div>
+           
 
-            <div class="restaurant__list">
+        
                 <article class="restaurant__type">
                     <div class="restaurant__type__img">
-                        <img src="images/restaurants/francaise.jpg" alt="palette du goût">
+                        <img src="images/restaurants/francaise.jpg" alt="A la française">
                         <span class="new_item">Nouveau</span>
                     </div>
                     <div class="restaurant__type__legend">
-                        <div>
-                             <h5 class="restaurant_name"> A la française</h5>
+                        <div class="hold_name">
+                             <h3 class="restaurant_name"> A la française</h3>
                             <span>Cité Rouget</span>
                         </div>
                        
                     <div class="like_icon">
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                     </div>
 
                 </article>
+
+                <article class="restaurant__type">
+                    <div class="restaurant__type__img">
+                        <img src="images/restaurants/francaise.jpg" alt="Le délice des sens">
+                        <span class="new_item">Nouveau</span>
+                    </div>
+                    <div class="restaurant__type__legend">
+                        <div class="hold_name">
+                             <h3 class="restaurant_name"> Le délice des sens</h3>
+                            <span>Folie-Méricourt</span>
+                        </div>
+                       
+                    <div class="like_icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    </div>
+
+                </article>
+
+
             </div>
 
 
@@ -125,7 +145,15 @@
             
         </section>
 
-        <footer></footer>
+        <footer>
+            <h3>ohmyfood</h3>
+            <ul>
+                <li class="has_icon">Proposer un restaurant</li>
+                <li class="has_icon">Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li>Contact</li>
+            </ul>
+        </footer>
         <script src="https://kit.fontawesome.com/2685297fbe.js" crossorigin="anonymous"></script>
 
     </body>
