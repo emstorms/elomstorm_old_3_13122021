@@ -11,7 +11,8 @@
 --grad-clr2: #FF79DA;
 --grad-clr3: #99E2D0;
 }
-
+// Logo et titres: Shrikhand
+// Texte: Roboto
 @media screen and (max-width :900px){
   
 body{
@@ -23,10 +24,12 @@ body{
     flex-direction: column;
     justify-content:center;
     counter-reset: func_num;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
-
+    font-family: 'Shrikhand', cursive;
+    font-size:22px;
 }
 
 .discovering{
@@ -53,6 +56,7 @@ header{
         height:inherit;
         &::placeholder{
             font-family: Arial,"FontAwesome";
+            background:"";
         }
     }
 
@@ -216,6 +220,13 @@ header{
                 text-align:center;
                 // padding:15px;
                 height:100%;
+                position:relative;
+
+                //Colored heart animating
+                &:hover .fas{
+                   
+                    opacity:1;
+                }
             }
 
             .hold_name{
@@ -231,8 +242,27 @@ header{
             }
 
             .fa-heart{
+                position:absolute;
                 font-size:20px;
-                color:green;
+                &.fas{
+                        //Full Heart
+                        color:transparent;
+                        background-image: linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
+                        background-clip: text; 
+                        opacity:0;
+                        transition-property:opacity;
+                        transition-duration:300ms;
+                }
+                &.far{
+                        //empty heart
+                        color:black;
+                }
+                
+                &:hover{
+                  background-image: linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
+                  background-clip: text;  
+                }
+                
             }
 
         }

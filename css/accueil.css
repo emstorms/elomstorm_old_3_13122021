@@ -20,6 +20,12 @@
     flex-direction: column;
     justify-content: center;
     counter-reset: func_num;
+    font-family: "Roboto", sans-serif;
+  }
+
+  header {
+    font-family: "Shrikhand", cursive;
+    font-size: 22px;
   }
 
   .discovering {
@@ -44,6 +50,7 @@
   }
   .discovering input[type=search]::placeholder {
     font-family: Arial, "FontAwesome";
+    background: "\f3c5";
   }
   .discovering__exploration {
     display: flex;
@@ -168,6 +175,10 @@
     flex: 0 0 20%;
     text-align: center;
     height: 100%;
+    position: relative;
+  }
+  .restaurant__type__legend .like_icon:hover .fas {
+    opacity: 1;
   }
   .restaurant__type__legend .hold_name {
     padding: 8px 20px;
@@ -180,8 +191,23 @@
     margin-bottom: 7px;
   }
   .restaurant__type__legend .fa-heart {
+    position: absolute;
     font-size: 20px;
-    color: green;
+  }
+  .restaurant__type__legend .fa-heart.fas {
+    color: transparent;
+    background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+    background-clip: text;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 300ms;
+  }
+  .restaurant__type__legend .fa-heart.far {
+    color: black;
+  }
+  .restaurant__type__legend .fa-heart:hover {
+    background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+    background-clip: text;
   }
 
   /***********
