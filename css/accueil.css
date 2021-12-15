@@ -44,35 +44,42 @@
   }
   .discovering input[type=search] {
     text-align: center;
-    border: 2px solid blue;
+    background-color: #eaeaea;
     width: inherit;
     height: inherit;
   }
   .discovering input[type=search]::placeholder {
     font-family: Arial, "FontAwesome";
     background: "\f3c5";
+    font-weight: 600;
   }
   .discovering__exploration {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 15px;
+    background-color: #f6f6f6;
+  }
+  .discovering__exploration h2 {
+    margin-bottom: -10px;
   }
   .discovering__exploration h2,
 .discovering__exploration a {
-    border: 1px solid purple;
     padding: 15px;
     text-align: center;
     text-decoration: none;
   }
   .discovering__exploration a:first-of-type {
     color: gray;
+    margin-bottom: 25px;
   }
   .discovering__exploration .bttn_exploration {
     border-radius: 36px;
     background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
     color: white;
     padding: 15px 25px;
+    box-shadow: 1px 0.3px 8px 0px #453b3b;
+    margin-bottom: 55px;
   }
 
   .functionning {
@@ -95,11 +102,13 @@
   .functionning_list .func_design {
     width: 100%;
     border: 1px solid orange;
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 22px;
+    padding: 25px 0px;
     margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 3px black;
   }
   .functionning_list .func_design > * {
     background-color: #9356DC;
@@ -132,22 +141,24 @@
   .restaurant__type {
     display: flex;
     flex-flow: column nowrap;
-    border: 1px solid green;
     margin-bottom: 15px;
     width: 100%;
     height: 251px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px black;
   }
   .restaurant__type__img {
-    border: 1px solid yellow;
     width: 100%;
     height: 70%;
     flex: 0 0 70%;
     position: relative;
+    border-radius: 15px 15px 0 0;
   }
   .restaurant__type__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 15px 15px 0 0;
   }
   .restaurant__type__img .new_item {
     position: absolute;
@@ -164,25 +175,23 @@
     flex: 0 0 30%;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid blue;
   }
   .restaurant__type__legend .like_icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid brown;
     width: 40px;
     flex: 0 0 20%;
     text-align: center;
     height: 100%;
     position: relative;
+    cursor: pointer;
   }
   .restaurant__type__legend .like_icon:hover .fas {
     opacity: 1;
   }
   .restaurant__type__legend .hold_name {
     padding: 8px 20px;
-    border: 1px solid yellowgreen;
     flex-basis: auto;
     flex: 1 0 50%;
     height: 100%;
@@ -226,6 +235,10 @@
   }
   footer ul {
     list-style-type: none;
+  }
+  footer ul .has_icon::before {
+    display: inline-block;
+    width: 15px;
   }
   footer ul .has_icon:nth-of-type(2) {
     font-weight: bold;

@@ -51,12 +51,14 @@ header{
     /*Search FORM*/
     input[type="search"]{
         text-align:center;
-        border:2px solid blue;
+        // border:2px solid blue;
+        background-color:#eaeaea;
         width:inherit;
         height:inherit;
         &::placeholder{
             font-family: Arial,"FontAwesome";
             background:"";
+            font-weight:600;
         }
     }
 
@@ -66,9 +68,14 @@ header{
     flex-direction: column;
     justify-content:center;
         padding:15px;
+    background-color:#f6f6f6;
+    h2{
+        margin-bottom: -10px;
+    }
+
     h2,
     a{
-        border:1px solid purple;
+        // border:1px solid purple;
         padding:15px;
         text-align:center;
         text-decoration:none;
@@ -78,6 +85,7 @@ header{
         // setting first link to gray color
         &:first-of-type{
             color:gray;
+            margin-bottom: 25px;
         }   
     }
     .bttn_exploration{
@@ -85,6 +93,8 @@ header{
         background-image:linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
         color: white;
         padding:15px 25px;
+        box-shadow: 1px 0.3px 8px 0px #453b3b;
+        margin-bottom: 55px;
     }
     }
 
@@ -113,12 +123,13 @@ header{
         .func_design{
             width: 100%;
             border:1px solid orange;
-            border-radius:15px;
-            padding:15px;
+            border-radius:22px;
+            padding:25px 0px;
             margin-bottom:15px;
             display:flex;
             justify-content:space-around;
-
+            background-color: #f6f6f6;
+            box-shadow: 1px 1px 3px black;
 
             > *{
                 background-color: #9356DC;
@@ -162,14 +173,16 @@ header{
         //Articles
         display:flex;
         flex-flow: column nowrap;
-        border:1px solid green;
+        // border:1px solid green;
         // padding:5px;
         margin-bottom:15px;
         // width: 336px;
         width:100%;
         height:251px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 3px black;
         &__img{
-            border:1px solid yellow;
+            // border:1px solid yellow;
             width:100%;
             // height:180px;
             height:70%;
@@ -178,11 +191,13 @@ header{
             // flex-basis: 70%;
             flex: 0 0 70%;
             position:relative;
+            border-radius: 15px 15px 0 0;
 
             img{
                 width:100%;
                 height:100%;
                 object-fit: cover;
+                border-radius: 15px 15px 0 0;
             }
             .new_item{
                 position:absolute;
@@ -207,14 +222,14 @@ header{
             
             justify-content: space-between;
             align-items: center;
-            border:1px solid blue;
+            // border:1px solid blue;
             // padding:5px;
 
             .like_icon{
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                border:1px solid brown;
+                // border:1px solid brown;
                 width:40px;
                 flex:0 0 20%;
                 text-align:center;
@@ -223,6 +238,7 @@ header{
                 position:relative;
 
                 //Colored heart animating
+                cursor:pointer;
                 &:hover .fas{
                    
                     opacity:1;
@@ -231,7 +247,7 @@ header{
 
             .hold_name{
                 padding:8px 20px;
-                border:1px solid yellowgreen;
+                // border:1px solid yellowgreen;
                 flex-basis:auto;
                 flex:1 0 50%;
                 height:100%;
@@ -287,6 +303,12 @@ header{
 
         ul{
             list-style-type:none;
+
+            .has_icon::before{
+                display: inline-block;
+                width:15px;
+                // border:1px solid rgb(240, 239, 239);
+            }
 
             .has_icon:nth-of-type(2){
                 font-weight:bold;
