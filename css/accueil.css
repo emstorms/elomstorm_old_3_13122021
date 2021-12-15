@@ -219,15 +219,33 @@
     padding: 20px;
     color: white;
   }
+  footer h3 {
+    font-family: "Shrikhand", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+  }
   footer ul {
     list-style-type: none;
   }
-  footer ul .has_icon {
+  footer ul .has_icon:nth-of-type(2) {
     font-weight: bold;
   }
-  footer ul .has_icon::before {
-    content: "#";
+  footer ul .has_icon:nth-of-type(2)::before {
+    font-family: "FontAwesome";
+    content: "\f4c4";
     margin-right: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  footer ul .has_icon:first-of-type {
+    font-weight: bold;
+  }
+  footer ul .has_icon:first-of-type::before {
+    font-family: "FontAwesome";
+    content: "\f2e7";
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: lighter;
   }
 }
 
