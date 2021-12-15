@@ -34,6 +34,29 @@ header{
     flex-direction: column;
     justify-content:center;
 
+    &__location{
+        width:100%;
+    }
+    
+    form{
+        width:100%;
+        padding:0 2px;
+        height:43px;
+    }
+
+
+    /*Search FORM*/
+    input[type="search"]{
+        text-align:center;
+        border:2px solid blue;
+        width:inherit;
+        height:inherit;
+        &::placeholder{
+            font-family: Arial,"FontAwesome";
+        }
+    }
+
+
     &__exploration{
     display:flex;
     flex-direction: column;
