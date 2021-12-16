@@ -127,6 +127,7 @@ header{
         padding: 0 5px;
 
         .func_design{
+<<<<<<< HEAD
 
             display:flex;
             width: 100%;
@@ -139,6 +140,18 @@ header{
             justify-content:space-around;
             background-color: #f6f6f6;
             box-shadow: 1px 1px 2px black;
+=======
+            width: 100%;
+            // border:1px solid orange;
+            border:1px solid orange;
+            border-radius:22px;
+            padding:25px 0px;
+            margin-bottom:15px;
+            display:flex;
+            justify-content:space-around;
+            background-color: #f6f6f6;
+            box-shadow: 1px 1px 3px black;
+>>>>>>> d18ff5814d8c9215bc0c1365af7eccdb28e754a1
 
             > *{
                 background-color: #cbc9ce;
