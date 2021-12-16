@@ -11,12 +11,11 @@
 --grad-clr2: #FF79DA;
 --grad-clr3: #99E2D0;
 }
-<<<<<<< HEAD
+
 // Logo et titres: Shrikhand
 // Texte: Roboto
-=======
 
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
+
 @media screen and (max-width :900px){
   
 body{
@@ -28,19 +27,18 @@ body{
     flex-direction: column;
     justify-content:center;
     counter-reset: func_num;
-<<<<<<< HEAD
+
     font-family: 'Roboto', sans-serif;
 }
 
 header{
     font-family: 'Shrikhand', cursive;
     font-size:22px;
-=======
+
 }
 
 header{
 
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
 }
 
 .discovering{
@@ -48,7 +46,6 @@ header{
     flex-direction: column;
     justify-content:center;
 
-<<<<<<< HEAD
     &__location{
         width:100%;
     }
@@ -75,14 +72,11 @@ header{
     }
 
 
-=======
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
     &__exploration{
     display:flex;
     flex-direction: column;
     justify-content:center;
         padding:15px;
-<<<<<<< HEAD
     background-color:#f6f6f6;
     h2{
         margin-bottom: -10px;
@@ -91,11 +85,6 @@ header{
     h2,
     a{
         // border:1px solid purple;
-=======
-    h2,
-    a{
-        border:1px solid purple;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
         padding:15px;
         text-align:center;
         text-decoration:none;
@@ -105,10 +94,7 @@ header{
         // setting first link to gray color
         &:first-of-type{
             color:gray;
-<<<<<<< HEAD
             margin-bottom: 25px;
-=======
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
         }   
     }
     .bttn_exploration{
@@ -116,11 +102,8 @@ header{
         background-image:linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
         color: white;
         padding:15px 25px;
-<<<<<<< HEAD
         box-shadow: 1px 0.3px 8px 0px #453b3b;
         margin-bottom: 55px;
-=======
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
     }
     }
 
@@ -148,7 +131,6 @@ header{
 
         .func_design{
             width: 100%;
-<<<<<<< HEAD
             // border:1px solid orange;
             border:1px solid orange;
             border-radius:22px;
@@ -158,15 +140,6 @@ header{
             justify-content:space-around;
             background-color: #f6f6f6;
             box-shadow: 1px 1px 3px black;
-=======
-            border:1px solid orange;
-            border-radius:15px;
-            padding:15px;
-            margin-bottom:15px;
-            display:flex;
-            justify-content:space-around;
-
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
 
             > *{
                 background-color: #9356DC;
@@ -210,25 +183,16 @@ header{
         //Articles
         display:flex;
         flex-flow: column nowrap;
-<<<<<<< HEAD
         // border:1px solid green;
-=======
-        border:1px solid green;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
         // padding:5px;
         margin-bottom:15px;
         // width: 336px;
         width:100%;
         height:251px;
-<<<<<<< HEAD
         border-radius: 15px;
         box-shadow: 1px 1px 3px black;
         &__img{
             // border:1px solid yellow;
-=======
-        &__img{
-            border:1px solid yellow;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
             width:100%;
             // height:180px;
             height:70%;
@@ -237,19 +201,13 @@ header{
             // flex-basis: 70%;
             flex: 0 0 70%;
             position:relative;
-<<<<<<< HEAD
             border-radius: 15px 15px 0 0;
-=======
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
 
             img{
                 width:100%;
                 height:100%;
                 object-fit: cover;
-<<<<<<< HEAD
                 border-radius: 15px 15px 0 0;
-=======
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
             }
             .new_item{
                 position:absolute;
@@ -274,28 +232,19 @@ header{
             
             justify-content: space-between;
             align-items: center;
-<<<<<<< HEAD
             // border:1px solid blue;
-=======
-            border:1px solid blue;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
             // padding:5px;
 
             .like_icon{
                 display:flex;
                 justify-content: center;
                 align-items: center;
-<<<<<<< HEAD
                 // border:1px solid brown;
-=======
-                border:1px solid brown;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
                 width:40px;
                 flex:0 0 20%;
                 text-align:center;
                 // padding:15px;
                 height:100%;
-<<<<<<< HEAD
                 position:relative;
 
                 //Colored heart animating
@@ -304,17 +253,11 @@ header{
                    
                     opacity:1;
                 }
-=======
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
             }
 
             .hold_name{
                 padding:8px 20px;
-<<<<<<< HEAD
                 // border:1px solid yellowgreen;
-=======
-                border:1px solid yellowgreen;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
                 flex-basis:auto;
                 flex:1 0 50%;
                 height:100%;
@@ -325,7 +268,6 @@ header{
             }
 
             .fa-heart{
-<<<<<<< HEAD
                 position:absolute;
                 font-size:20px;
                 &.fas{
@@ -347,10 +289,6 @@ header{
                   background-clip: text;  
                 }
                 
-=======
-                font-size:20px;
-                color:green;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
             }
 
         }
@@ -366,7 +304,6 @@ header{
         padding:20px;
         color:white;
 
-<<<<<<< HEAD
         h3{
             font-family:"Shrikhand",cursive;
             // font-family: 'Shrikhand', cursive;
@@ -403,17 +340,6 @@ header{
              margin-right:10px;
              font-size:12px;
              font-weight:lighter;
-=======
-        ul{
-            list-style-type:none;
-
-            .has_icon{
-                font-weight:bold;
-
-            &::before{
-             content:"#";
-             margin-right:10px;
->>>>>>> c66c9d5aed0d25f6269e8600cca166ffe8ed9a9f
             } 
             }
             
