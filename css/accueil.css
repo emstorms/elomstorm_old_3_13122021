@@ -1,17 +1,265 @@
-/* Error: expected "{".
- *    ,
- * 32 |     font-family: 'Roboto', sans-serif;
- *    |                                      ^
- *    '
- *   sass_\_accueil.scss 32:38  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected \"{\".\a    \2577 \a 32 \2502      font-family: 'Roboto', sans-serif;\d\a    \2502                                       ^\a    \2575 \a   sass_\\_accueil.scss 32:38  root stylesheet";
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
+
+:root {
+  --grad-clr1:#9356DC;
+  --grad-clr2: #FF79DA;
+  --grad-clr3: #99E2D0;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    counter-reset: func_num;
+    font-family: "Roboto", sans-serif;
+  }
+
+  header {
+    font-family: "Shrikhand", cursive;
+    font-size: 22px;
+  }
+
+  .discovering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*Search FORM*/
+  }
+  .discovering__location {
+    width: 100%;
+  }
+  .discovering form {
+    width: 100%;
+    padding: 0 2px;
+    height: 43px;
+  }
+  .discovering input[type=search] {
+    text-align: center;
+    background-color: #eaeaea;
+    width: inherit;
+    height: inherit;
+  }
+  .discovering input[type=search]::placeholder {
+    font-family: Arial, "FontAwesome";
+    background: "\f3c5";
+    font-weight: 600;
+  }
+  .discovering__exploration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    background-color: #f6f6f6;
+  }
+  .discovering__exploration h2 {
+    margin-bottom: -10px;
+  }
+  .discovering__exploration h2,
+.discovering__exploration a {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .discovering__exploration a:first-of-type {
+    color: gray;
+    margin-bottom: 25px;
+  }
+  .discovering__exploration .bttn_exploration {
+    border-radius: 36px;
+    background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+    color: white;
+    padding: 15px 25px;
+    box-shadow: 1px 0.3px 8px 0px #453b3b;
+    margin-bottom: 55px;
+  }
+
+  .functionning {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .functionning_h2 {
+    margin-left: 15px;
+  }
+  .functionning_list {
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+  .functionning_list .func_design {
+    width: 100%;
+    border: 1px solid orange;
+    border-radius: 22px;
+    padding: 25px 0px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 3px black;
+  }
+  .functionning_list .func_design > * {
+    background-color: #9356DC;
+  }
+  .functionning .func_count {
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    width: 15px;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 14px;
+  }
+  .functionning .func_count:before {
+    counter-increment: func_num;
+    content: counter(func_num);
+  }
+
+  .restaurant {
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .restaurant__list {
+    border: 1px dotted lightblue;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurant__type {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 251px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px black;
+  }
+  .restaurant__type__img {
+    width: 100%;
+    height: 70%;
+    flex: 0 0 70%;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+  }
+  .restaurant__type__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  .restaurant__type__img .new_item {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background-color: var(--grad-clr3);
+    color: #17B78F;
+    padding: 5px;
+  }
+  .restaurant__type__legend {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    flex: 0 0 30%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurant__type__legend .like_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    flex: 0 0 20%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+  .restaurant__type__legend .like_icon:hover .fas {
+    opacity: 1;
+  }
+  .restaurant__type__legend .hold_name {
+    padding: 8px 20px;
+    flex-basis: auto;
+    flex: 1 0 50%;
+    height: 100%;
+  }
+  .restaurant__type__legend .restaurant_name {
+    margin-bottom: 7px;
+  }
+  .restaurant__type__legend .fa-heart {
+    position: absolute;
+    font-size: 20px;
+  }
+  .restaurant__type__legend .fa-heart.fas {
+    color: transparent;
+    background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+    background-clip: text;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 300ms;
+  }
+  .restaurant__type__legend .fa-heart.far {
+    color: black;
+  }
+  .restaurant__type__legend .fa-heart:hover {
+    background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+    background-clip: text;
+  }
+
+  /***********
+   **Footer**
+  ***********/
+  footer {
+    width: 100%;
+    background-color: #373737;
+    padding: 20px;
+    color: white;
+  }
+  footer h3 {
+    font-family: "Shrikhand", cursive;
+    font-size: 17px;
+    font-weight: lighter;
+  }
+  footer ul {
+    list-style-type: none;
+  }
+  footer ul .has_icon::before {
+    display: inline-block;
+    width: 15px;
+  }
+  footer ul .has_icon:nth-of-type(2) {
+    font-weight: bold;
+  }
+  footer ul .has_icon:nth-of-type(2)::before {
+    font-family: "FontAwesome";
+    content: "\f4c4";
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  footer ul .has_icon:first-of-type {
+    font-weight: bold;
+  }
+  footer ul .has_icon:first-of-type::before {
+    font-family: "FontAwesome";
+    content: "\f2e7";
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+}
+
+/*# sourceMappingURL=accueil.css.map */
