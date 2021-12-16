@@ -12,6 +12,10 @@
 --grad-clr3: #99E2D0;
 }
 
+// Logo et titres: Shrikhand
+// Texte: Roboto
+
+
 @media screen and (max-width :900px){
   
 body{
@@ -23,9 +27,12 @@ body{
     flex-direction: column;
     justify-content:center;
     counter-reset: func_num;
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
+    font-family: 'Shrikhand', cursive,arial;
+    font-size:22px;
 
 }
 
@@ -33,15 +40,48 @@ header{
     display:flex;
     flex-direction: column;
     justify-content:center;
+    width:100%;
+
+    &__location{
+        width:100%;
+    }
+    
+    form{
+        width:100%;
+        padding:0 2px;
+        height:43px;
+    }
+
+
+    /*Search FORM*/
+    input[type="search"]{
+        text-align:center;
+        // border:2px solid blue;
+        background-color:#eaeaea;
+        width:inherit;
+        height:inherit;
+        &::placeholder{
+            font-family: Arial,"FontAwesome";
+            background:"";
+            font-weight:600;
+        }
+    }
+
 
     &__exploration{
     display:flex;
     flex-direction: column;
     justify-content:center;
-        padding:15px;
+    padding:15px;
+    background-color:#f6f6f6;
+    width:100%;
+    h2{
+        margin-bottom: -10px;
+    }
+
     h2,
     a{
-        border:1px solid purple;
+        // border:1px solid purple;
         padding:15px;
         text-align:center;
         text-decoration:none;
@@ -51,6 +91,7 @@ header{
         // setting first link to gray color
         &:first-of-type{
             color:gray;
+            margin-bottom: 25px;
         }   
     }
     .bttn_exploration{
@@ -58,6 +99,8 @@ header{
         background-image:linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
         color: white;
         padding:15px 25px;
+        box-shadow: 1px 0.4px 8px 0px #453b3b;
+        margin-bottom: 55px;
     }
     }
 
@@ -80,18 +123,20 @@ header{
         // 15px to align title with funclist
         // padding:0 15px;
         width:100%;
-        margin-top:15px;
+        margin-top:25px;
         padding: 0 5px;
 
         .func_design{
             width: 100%;
+            // border:1px solid orange;
             border:1px solid orange;
-            border-radius:15px;
-            padding:15px;
+            border-radius:22px;
+            padding:25px 0px;
             margin-bottom:15px;
             display:flex;
             justify-content:space-around;
-
+            background-color: #f6f6f6;
+            box-shadow: 1px 1px 3px black;
 
             > *{
                 background-color: #9356DC;
@@ -130,19 +175,22 @@ header{
         width: inherit;
         display:flex;
         flex-direction: column;
+        margin-top:25px;
     }
     &__type{
         //Articles
         display:flex;
         flex-flow: column nowrap;
-        border:1px solid green;
+        // border:1px solid green;
         // padding:5px;
         margin-bottom:15px;
         // width: 336px;
         width:100%;
         height:251px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 3px black;
         &__img{
-            border:1px solid yellow;
+            // border:1px solid yellow;
             width:100%;
             // height:180px;
             height:70%;
@@ -151,11 +199,13 @@ header{
             // flex-basis: 70%;
             flex: 0 0 70%;
             position:relative;
+            border-radius: 15px 15px 0 0;
 
             img{
                 width:100%;
                 height:100%;
                 object-fit: cover;
+                border-radius: 15px 15px 0 0;
             }
             .new_item{
                 position:absolute;
@@ -180,24 +230,32 @@ header{
             
             justify-content: space-between;
             align-items: center;
-            border:1px solid blue;
+            // border:1px solid blue;
             // padding:5px;
 
             .like_icon{
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                border:1px solid brown;
+                // border:1px solid brown;
                 width:40px;
                 flex:0 0 20%;
                 text-align:center;
                 // padding:15px;
                 height:100%;
+                position:relative;
+
+                //Colored heart animating
+                cursor:pointer;
+                &:hover .fas{
+                   
+                    opacity:1;
+                }
             }
 
             .hold_name{
                 padding:8px 20px;
-                border:1px solid yellowgreen;
+                // border:1px solid yellowgreen;
                 flex-basis:auto;
                 flex:1 0 50%;
                 height:100%;
@@ -208,8 +266,27 @@ header{
             }
 
             .fa-heart{
+                position:absolute;
                 font-size:20px;
-                color:green;
+                &.fas{
+                        //Full Heart
+                        color:transparent;
+                        background-image: linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
+                        background-clip: text; 
+                        opacity:0;
+                        transition-property:opacity;
+                        transition-duration:300ms;
+                }
+                &.far{
+                        //empty heart
+                        color:black;
+                }
+                
+                &:hover{
+                  background-image: linear-gradient(to bottom right, var(--grad-clr2),var(--grad-clr1));
+                  background-clip: text;  
+                }
+                
             }
 
         }
@@ -225,15 +302,42 @@ header{
         padding:20px;
         color:white;
 
+        h3{
+            font-family:"Shrikhand",cursive;
+            // font-family: 'Shrikhand', cursive;
+            font-size:17px;
+            font-weight:lighter;
+        }
+
         ul{
             list-style-type:none;
 
-            .has_icon{
+            .has_icon::before{
+                display: inline-block;
+                width:15px;
+                // border:1px solid rgb(240, 239, 239);
+            }
+
+            .has_icon:nth-of-type(2){
                 font-weight:bold;
 
             &::before{
-             content:"#";
+                font-family:"FontAwesome";
+             content:"";
              margin-right:10px;
+             font-size:12px;
+             font-weight:lighter;
+            } 
+            }
+            .has_icon:first-of-type{
+                font-weight:bold;
+
+            &::before{
+                font-family:"FontAwesome";
+             content:"\f2e7";
+             margin-right:10px;
+             font-size:12px;
+             font-weight:lighter;
             } 
             }
             
