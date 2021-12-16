@@ -102,31 +102,39 @@
     padding: 0 5px;
   }
   .functionning_list .func_design {
+    display: flex;
     width: 100%;
-    border: 1px solid orange;
     border-radius: 22px;
     padding: 25px 0px;
     margin-bottom: 15px;
-    display: flex;
     justify-content: space-around;
     background-color: #f6f6f6;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 2px black;
   }
   .functionning_list .func_design > * {
-    background-color: #9356DC;
+    background-color: #cbc9ce;
+  }
+  .functionning_list .func_design:hover {
+    background-color: #f4ecfe;
+  }
+  .functionning_list .func_design .fa-bars {
+    margin-left: -2px;
   }
   .functionning .func_count {
-    background-color: blue;
     position: absolute;
     left: 0;
-    width: 15px;
+  }
+  .functionning .func_count:before {
+    display: inline-block;
     border-radius: 50%;
     padding: 3px;
     font-size: 14px;
-  }
-  .functionning .func_count:before {
+    background-color: var(--grad-clr1);
     counter-increment: func_num;
     content: counter(func_num);
+    color: white;
+    width: 15px;
+    text-align: center;
   }
 
   .restaurant {
