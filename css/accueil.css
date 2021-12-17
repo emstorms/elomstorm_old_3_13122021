@@ -8,6 +8,7 @@
   --grad-clr1:#9356DC;
   --grad-clr2: #FF79DA;
   --grad-clr3: #99E2D0;
+  --test-var:10px;
 }
 
 @media screen and (max-width: 900px) {
