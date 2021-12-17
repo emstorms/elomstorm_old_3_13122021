@@ -43,6 +43,52 @@
     object-fit: cover;
   }
 
+  main {
+    border: 1px solid red;
+    /*Menu items*/
+  }
+  main .menu_list {
+    /*Hold the list of all existing menu item*/
+    border: 1px solid purple;
+    padding: 4px;
+  }
+  main .menu_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid purple;
+    padding: 4px;
+  }
+  main .menu_title .menu__like_icon {
+    font-size: 24px;
+    border: 1px solid orange;
+    padding: 11px;
+  }
+  main .menu_title .menu__name {
+    border: 1px solid black;
+  }
+  main .meal_combo {
+    margin-top: 10px;
+    border: 1px solid red;
+    padding: 3px;
+  }
+  main section.meal_category h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+    border: 1px solid red;
+  }
+  main section.meal_category .meal_type {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid green;
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+  }
+  main section.meal_category .meal_type_price {
+    align-self: flex-end;
+  }
+
   /***********
    **Footer**
   ***********/

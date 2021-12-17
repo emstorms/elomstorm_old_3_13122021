@@ -47,6 +47,71 @@ header{
     }
 }
 
+// Composing Menu with all exissting item. 
+// Listing  dish entry and dessert categories
+main{
+    border:1px solid red;
+
+    .menu_list{
+        /*Hold the list of all existing menu item*/
+        border:1px solid purple;
+        padding:4px;
+    }
+
+    .menu_title{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        border:1px solid purple;
+        padding:4px;
+
+         .menu__like_icon{
+            font-size: 24px;
+            border:1px solid orange;
+            padding: 11px;
+         }
+         .menu__name{
+             border:1px solid black;
+         }
+    }
+
+    /*Menu items*/
+    .meal_combo{
+        margin-top:10px;
+        border:1px solid red;
+        padding:3px;
+    }
+    // Sub_type Catégories (entry dish dessert)
+    section{
+
+        &.meal_category{
+           
+            h4{
+                text-transform:uppercase ;
+                font-weight: normal;
+                border:1px solid red;
+            }
+
+            .meal_type{
+                display:flex;
+                justify-content:space-between;
+                border:1px solid green;
+                margin-top:10px;
+                padding:10px;
+                text-decoration:none;
+
+                &_price{
+                    align-self:flex-end;
+                }
+            }
+        }
+    }
+   
+}
+
+
+
+
 
 //Next Update
 // Footer will be include by sass function or import
