@@ -3,6 +3,13 @@
     margin:0;
 }
 
+:root{
+    // Will be put in variable file then imported
+    
+--grad-clr1:#9356DC;
+--grad-clr2: #FF79DA;
+--grad-clr3: #99E2D0;
+}
 
 @media screen and (max-width :900px){
 
@@ -80,6 +87,30 @@ main{
         margin-top:10px;
         border:1px solid red;
         padding:3px;
+
+        .confirmation{
+            // hold buying button
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border:1px solid black;
+            padding:4px;
+            height:150px;
+             .buy{
+            // Buy / purshase Button
+            width:50%;
+            border-radius: 36px;
+            background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+            color: white;
+            padding: 15px 25px;
+            box-shadow: 1px 0.4px 3px 0px #453b3b;
+            font-size:16px;
+            // margin-bottom: 55px;
+          }
+        }
+
+       
+        }
     }
     // Sub_type Catégories (entry dish dessert)
     section{
@@ -95,19 +126,68 @@ main{
             .meal_type{
                 display:flex;
                 justify-content:space-between;
+                align-items:center;
+                position:relative;
                 border:1px solid green;
                 margin-top:10px;
                 padding:10px;
                 text-decoration:none;
+                height:50px;
+                overflow:hidden;
 
                 &_price{
                     align-self:flex-end;
+                    transition:transform 400ms;
                 }
+
+                .valid_choice{
+                    // display:inline-block;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    position:absolute;
+                    right:-15%;
+                    width:15%;
+                    height:100%;
+                    background-color:lightgreen;
+                    transition-property:transform;
+                    transition-duration:400ms;
+
+                    .fa-check-circle{
+                        transform:rotateZ(-180deg);
+                        transition-property:transform;
+                        transition-duration: 550ms;
+                        color:white;
+                        font-size:20px;
+                    }
+
+                    &:hover{
+                        background-color:var(--grad-clr3);
+                    }
+                    
+                }
+
+                // showing validchoice button
+                &:hover {
+                    // Transalte price
+                    .meal_type_price{
+                        
+                        transform:translateX(-60px);
+                    }
+
+                    .valid_choice{
+                    transform:translateX(-100%);
+                      .fa-check-circle{
+                          transform:rotateZ(00deg) scale(1.5);
+                      }
+                    }
+                }
+
             }
         }
     }
    
-}
+
 
 
 

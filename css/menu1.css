@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+:root {
+  --grad-clr1:#9356DC;
+  --grad-clr2: #FF79DA;
+  --grad-clr3: #99E2D0;
+}
+
 @media screen and (max-width: 900px) {
   body {
     box-sizing: border-box;
@@ -72,21 +78,75 @@
     border: 1px solid red;
     padding: 3px;
   }
-  main section.meal_category h4 {
+  main .meal_combo .confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 4px;
+    height: 150px;
+  }
+  main .meal_combo .confirmation .buy {
+    width: 50%;
+    border-radius: 36px;
+    background-image: linear-gradient(to bottom right, var(--grad-clr2), var(--grad-clr1));
+    color: white;
+    padding: 15px 25px;
+    box-shadow: 1px 0.4px 3px 0px #453b3b;
+    font-size: 16px;
+  }
+
+  section.meal_category h4 {
     text-transform: uppercase;
     font-weight: normal;
     border: 1px solid red;
   }
-  main section.meal_category .meal_type {
+  section.meal_category .meal_type {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
     border: 1px solid green;
     margin-top: 10px;
     padding: 10px;
     text-decoration: none;
+    height: 50px;
+    overflow: hidden;
   }
-  main section.meal_category .meal_type_price {
+  section.meal_category .meal_type_price {
     align-self: flex-end;
+    transition: transform 400ms;
+  }
+  section.meal_category .meal_type .valid_choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -15%;
+    width: 15%;
+    height: 100%;
+    background-color: lightgreen;
+    transition-property: transform;
+    transition-duration: 400ms;
+  }
+  section.meal_category .meal_type .valid_choice .fa-check-circle {
+    transform: rotateZ(-180deg);
+    transition-property: transform;
+    transition-duration: 550ms;
+    color: white;
+    font-size: 20px;
+  }
+  section.meal_category .meal_type .valid_choice:hover {
+    background-color: var(--grad-clr3);
+  }
+  section.meal_category .meal_type:hover .meal_type_price {
+    transform: translateX(-60px);
+  }
+  section.meal_category .meal_type:hover .valid_choice {
+    transform: translateX(-100%);
+  }
+  section.meal_category .meal_type:hover .valid_choice .fa-check-circle {
+    transform: rotateZ(0deg) scale(1.5);
   }
 
   /***********
